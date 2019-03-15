@@ -1,4 +1,27 @@
 {
   "name": "lovecalculator",
-  "version": ""
+  "homepage": "https://Braja123.github.io/Love_calc",
+  "scripts": {
+    "deploy": "gh-pages"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "version": "1.0.0",
+  "description": "love calculator",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Braja123/Love_calc.git"
+  },
+  "keywords": [
+    "love",
+    "calculator"
+  ],
+  "author": "Braja Gopal Das",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Braja123/Love_calc/issues"
+  }
 }
