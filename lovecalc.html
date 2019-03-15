@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https//images.pexels.com/photo/1028725/pexels-photo-1028725.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="card w-50 m-auto text-center">
+            <div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
+            <div class="card-body">
+                <form class="form-inline w-75 m-auto">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" id="name" class="form-control text-center">
+                    </div>
+                    <div> <span class="pl-4 pr-4"> + </span> </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Love Name" id="lname" class="form-control text-center">
+                    </div>
+                </form>
+                <br>
+                <div class="w-75 m-auto">
+                    <button class="btn btn-success w-50" onclick="checkLove()">CLICK</button>
+                </div>
+                <br>
+                <div>
+                    <input type="text" id="loveCal" class="form-control w-25 m-auto text-center" placeholder="Love Percentage">
+                </div>
+            </div>
+            <div class="card-footer">God Bless Your Relationship</div>
+        </div>
+    </header>
+
+    <script>
+        function checkLove(){
+
+            let name = document.getElementById("name").value;
+            let lname = document.getElementById("lname").value;
+
+            if(name == "" ){
+                alert("Please Enter Your Name");
+            } else if(name.length <= 2){
+                alert("Enter More than 2 Characters");
+            } else if(!isNaN(name)){
+                alert("Please Enter Only Chars");
+            } else if(lname == "" ){
+                alert("Please Enter Your Love Name");
+            } else if(lname.length <= 2){
+                alert("Enter More than 2 Characters");
+            } else if(!isNaN(lname)){
+                alert("Please Enter Only Chars");
+            } 
+            else {
+                let cal = Math.floor(Math.random() * 100);
+                document.querySelector("#loveCal").value = cal + "%";
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
